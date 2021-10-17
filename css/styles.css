@@ -8,7 +8,23 @@
   --hero--backgraundcolor: #2f303a;
   --botton--color--hover: #188ce8;
 }
-
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin: 0;
+}
+ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+img {
+  display: block;
+}
 body {
   color: var(--primary--text--color);
   font-family: Roboto, sans-serif;
@@ -16,6 +32,19 @@ body {
   line-height: 1.71;
   letter-spacing: 0.03em;
 }
+header {
+  padding-top: 25px;
+  padding-bottom: 25px;
+  border-bottom: 1px solid #ececec;
+}
+
+.conteiner {
+  width: 1200px;
+  padding-left: 15px;
+  padding-right: 15px;
+  margin: 0 auto;
+}
+
 .list {
   list-style: none;
 }
@@ -31,6 +60,25 @@ body {
   line-height: 1.14;
   letter-spacing: 0.02em;
 }
+.site-nav {
+  display: flex;
+  align-items: center;
+}
+.header-nav {
+  display: flex;
+}
+.header-nav-link:not(:last-child) {
+  margin-right: 50px;
+}
+.header-contact {
+  display: flex;
+  margin-left: auto;
+}
+.header-conteiner {
+  display: flex;
+  align-items: center;
+}
+
 .site-nav .link:hover,
 .site-nav .link:focus {
   color: var(--accent--color);
@@ -44,14 +92,13 @@ body {
   font-weight: 700;
   font-size: 26px;
   line-height: 1, 2;
+
+  margin-right: 93px;
 }
 .logo span {
   color: var(--accent--color);
 }
-/*.logo:hover,
- .logo:focus {
-  color: var(--accent--color);
-}*/
+
 .header-contact a {
   color: var(--primary--text--color);
   font-weight: 500;
@@ -69,6 +116,17 @@ body {
 /*Hero*/
 .hero {
   background-color: var(--hero--backgraundcolor);
+  min-height: 600px;
+}
+.hero-conteiner {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-bottom: 94px;
+}
+.our-benefits {
+  padding-bottom: 94px;
+  padding-top: 94px;
 }
 .hero-title {
   color: var(--text--color--white);
@@ -78,6 +136,11 @@ body {
   text-align: center;
   letter-spacing: 0.06em;
   text-transform: uppercase;
+
+  width: 696px;
+  padding-top: 200px;
+
+  margin-bottom: 30px;
 }
 .section-title {
   color: var(--text--color);
@@ -85,24 +148,63 @@ body {
   font-size: 36px;
   line-height: 1.17;
   text-align: center;
+  margin-bottom: 50px;
 }
+
 .benefits .title {
   color: var(--text--color);
   font-weight: 700;
   font-size: 14px;
   line-height: 1.14;
   text-transform: uppercase;
+  margin-bottom: 10px;
 }
-/*.benefits .text {
-  font-size: 14px;
-  line-height: 1.71;
-}*/
+
+.benefits {
+  display: flex;
+  justify-content: space-between;
+}
+.benefits-item {
+  width: 270px;
+  min-height: 101px;
+}
+.our-directions {
+  padding-top: 94px;
+  padding-bottom: 94px;
+}
+
+.directions {
+  display: flex;
+  justify-content: space-between;
+}
+
 /*Секция наши разработчики*/
 .team .title {
   color: var(--text--color);
   font-weight: 500;
   font-size: 16px;
   line-height: 1.19;
+}
+.our-professionals {
+  padding-bottom: 94px;
+  padding-top: 94px;
+}
+
+.professionals-card {
+  text-align: center;
+  padding-bottom: 30px;
+  flex-basis: calc(100% / 4 - 30px);
+  margin-left: 30px;
+}
+
+.name {
+  margin-top: 30px;
+  margin-bottom: 10px;
+}
+.team {
+  display: flex;
+  flex-wrap: wrap;
+  margin-left: -30px;
 }
 .team .profesion {
   font-size: 16px;
@@ -115,9 +217,15 @@ body {
 /*Footer*/
 .footer {
   background-color: var(--hero--backgraundcolor);
+  padding-top: 60px;
+  padding-bottom: 60px;
 }
 .footer .logo {
   color: var(--text--color--white);
+  display: block;
+  margin-right: 0px;
+  margin-bottom: 20px;
+  width: 145px;
 }
 .footer-contacts .link {
   color: var(--primary--text--color);
@@ -145,6 +253,16 @@ body {
   line-height: 1.88;
   letter-spacing: 0.06em;
   cursor: pointer;
+
+  width: 210px;
+  min-height: 50px;
+  border-radius: 4px;
+  padding: 10px 32px;
+}
+.button:hover,
+.button:focus {
+  background-color: var(--botton--color--hover);
+  color: var(--text--color--white);
 }
 .button-primary {
   color: var(--text--color--white);
@@ -155,6 +273,11 @@ body {
   line-height: 1.63;
   text-align: center;
   cursor: pointer;
+
+  min-width: 80px;
+  min-height: 38px;
+  border-radius: 4px;
+  padding: 6px 22px;
 }
 .button-secondary {
   color: var(--text--color);
@@ -165,12 +288,16 @@ body {
   line-height: 1.63;
   text-align: center;
   cursor: pointer;
+
+  min-width: 80px;
+  min-height: 38px;
+  border-radius: 4px;
+  padding: 6px 22px;
 }
-.hero .button-primary:focus,
-.hero .button-primary:hover {
-  background-color: var(--botton--color--hover);
-  color: var(--text--color--white);
+.button-menu:not(:last-child) {
+  margin-right: 8px;
 }
+
 .button-primary:hover,
 .button-primary:focus {
   color: var(--text--color);
@@ -182,8 +309,36 @@ body {
   background-color: var(--accent--color);
 }
 /*Portfolio*/
+.portfolio-buttons {
+  display: flex;
+  justify-content: center;
+
+  margin-bottom: 34px;
+}
+
+.portfolio-cards {
+  padding-top: 94px;
+  padding-bottom: 94px;
+}
+
 .projects p {
   color: var(--primary--text--color);
+}
+.projects {
+  display: flex;
+  flex-wrap: wrap;
+  margin-left: -30px;
+  margin-bottom: -30px;
+}
+.projects-cards {
+  flex-basis: calc(100% / 3 - 30px);
+  margin-left: 30px;
+  margin-bottom: 30px;
+
+  border-bottom: 1px Solid #eeeeee;
+}
+.projects-cards-title {
+  padding: 20px 24px;
 }
 .projects .title {
   font-weight: 700;
