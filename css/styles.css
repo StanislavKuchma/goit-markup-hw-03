@@ -178,7 +178,13 @@ header {
 
 .directions {
   display: flex;
-  justify-content: space-between;
+
+  margin-left: -30px;
+}
+.directions-item {
+  width: 370px;
+  flex-basis: calc(100% / 3 - 30px);
+  margin-left: 30px;
 }
 
 /*Секция наши разработчики*/
