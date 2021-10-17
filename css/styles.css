@@ -162,11 +162,14 @@ header {
 
 .benefits {
   display: flex;
-  justify-content: space-between;
+  /* justify-content: space-between; */
+  margin-left: -30px;
 }
 .benefits-item {
   width: 270px;
-  min-height: 101px;
+  /* min-height: 101px; */
+  flex-basis: calc(100% / 4 - 30px);
+  margin-left: 30px;
 }
 .our-directions {
   padding-top: 94px;
