@@ -241,6 +241,12 @@ header {
 .footer-contacts .link {
   color: var(--primary--text--color);
 }
+.footer-contacts-link {
+  display: block;
+}
+.footer-contacts-link + .footer-contacts-link {
+  margin-top: 9px;
+}
 .footer-contacts a {
   font-style: normal;
 }
