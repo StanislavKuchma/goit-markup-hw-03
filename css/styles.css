@@ -51,6 +51,10 @@ header {
 .link {
   text-decoration: none;
 }
+.section {
+  padding-top: 94px;
+  padding-bottom: 94px;
+}
 /*навигация*/
 .site-nav .link {
   color: var(--text--color);
@@ -122,12 +126,11 @@ header {
   display: flex;
   flex-direction: column;
   align-items: center;
-  padding-bottom: 94px;
 }
-.our-benefits {
+/* .our-benefits {
   padding-bottom: 94px;
   padding-top: 94px;
-}
+} */
 .hero-title {
   color: var(--text--color--white);
   font-weight: 900;
@@ -172,8 +175,7 @@ header {
   margin-left: 30px;
 }
 .our-directions {
-  padding-top: 94px;
-  padding-bottom: 94px;
+  padding-top: 0px;
 }
 
 .directions {
@@ -194,10 +196,10 @@ header {
   font-size: 16px;
   line-height: 1.19;
 }
-.our-professionals {
+/* .our-professionals {
   padding-bottom: 94px;
   padding-top: 94px;
-}
+} */
 
 .professionals-card {
   text-align: center;
@@ -325,10 +327,10 @@ header {
   margin-bottom: 34px;
 }
 
-.portfolio-cards {
+/* .portfolio-cards {
   padding-top: 94px;
   padding-bottom: 94px;
-}
+} */
 
 .projects p {
   color: var(--primary--text--color);
