@@ -123,12 +123,16 @@ header {
 .hero {
   background-color: var(--hero--backgraundcolor);
   min-height: 600px;
-}
-.hero-conteiner {
+
   padding-top: 200px;
   padding-bottom: 200px;
   text-align: center;
 }
+/* .hero-conteiner {
+  padding-top: 200px;
+  padding-bottom: 200px;
+  text-align: center;
+} */
 
 .hero-title {
   color: var(--text--color--white);
@@ -198,13 +202,15 @@ header {
 
 .professionals-card {
   text-align: center;
-  padding-bottom: 30px;
+
   flex-basis: calc(100% / 4 - 30px);
   margin-left: 30px;
 }
 .professionals-card-title {
   padding-bottom: 30px;
   padding-top: 30px;
+
+  background-color: var(--main--backgraundcolor);
 
   border-bottom: 1px Solid #eeeeee;
   border-right: 1px Solid #eeeeee;
@@ -239,7 +245,7 @@ header {
   margin-right: 0px;
   /* margin-bottom: 20px;
   width: 145px; */
-  padding-bottom: 20px;
+  margin-bottom: 20px;
 }
 .footer-contacts .link {
   color: var(--primary--text--color);
@@ -248,7 +254,7 @@ header {
   display: block;
 }
 .footer-contacts-link + .footer-contacts-link {
-  padding-top: 9px;
+  margin-top: 9px;
 }
 .footer-contacts a {
   font-style: normal;
@@ -278,6 +284,7 @@ header {
   min-height: 50px;
   border-radius: 4px;
   padding: 10px 32px;
+  border: none;
 }
 .button:hover,
 .button:focus {
